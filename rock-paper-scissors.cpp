@@ -1,6 +1,7 @@
 #include <iostream>
 #include <ctime>
 
+//Function Declarations
 char getUserChoice();
 char getComputerChoice();
 void showChoice(char choice);
@@ -10,6 +11,7 @@ int main() {
     char player;
     char computer;
 
+    //scoreboard items
     int playerScore = 0, computerScore = 0, tieScore = 0; 
 
     std::cout << "Rock-Paper-Scissors Game!\n";
@@ -19,7 +21,7 @@ int main() {
         player = getUserChoice();
 
         if (player == 'e') {
-            break; \
+            break; // exit
         }
 
         std::cout << "Your choice: ";
@@ -65,6 +67,7 @@ char getUserChoice() {
     return player;
 }
 
+//computer will generate random choice 
 char getComputerChoice() {
     srand(time(0)); 
     int num = rand() % 3 + 1;
